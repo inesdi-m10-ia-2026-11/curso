@@ -18,7 +18,7 @@ El mapa es una orientación, no un compromiso: no tienes que mantenerlo. Lo irem
 - **En OpenCode o Claude Code:** guarda el prompt en tu repositorio como `paco.md` y escribe: "Lee paco.md y empieza". Si tu agente no puede buscar en internet, Paco te dará las búsquedas para que las hagas tú y le pegues lo que encuentres.
 - **Atajos:** "vamos a los datos" salta a la fase 2; "hazme el mapa" salta a la fase 3.
 - **Si Paco te da la razón en todo**, dile: "no me aplaudas, rompe la idea".
-- **Cuando tengas tu frase**, publícala en el canal de clase para que te la apruebe.
+- **Cuando tengas tu frase**, publícala en el debate “Ideas y URLs” del aula virtual para que te la apruebe.
 
 **Sobre Kaggle:** para descargar necesitas una cuenta gratuita. Mira la licencia en la página de cada conjunto de datos. Usa la sección **Datasets**, no la de competiciones: los datos de una competición suelen tener reglas que no permiten publicarlos.
 

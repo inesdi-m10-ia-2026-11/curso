@@ -122,7 +122,7 @@ OpenCode es un agente de IA que lee tu proyecto, escribe código y ejecuta coman
 2. En OpenCode, escribe `/connect`, elige **Google** y pega la clave.
 3. En el selector de modelos, elige un modelo Gemini Flash.
 
-La clave es como una contraseña: no la pegues en ningún archivo, ni en el canal de clase, ni en GitHub.
+La clave es como una contraseña: no la pegues en ningún archivo, ni en el debate “Ideas y URLs” del aula virtual, ni en GitHub.
 
 ---
 

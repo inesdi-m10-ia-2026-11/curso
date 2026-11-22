@@ -29,7 +29,7 @@ Sitios con datos abiertos: datos.gob.es, el portal de datos abiertos del Ayuntam
 
 **¿Sin idea o sin datos? Paco (opcional).** Paco es tu sparring: no te da ideas, te saca las tuyas; te busca datos reales en Kaggle y en datos abiertos y te dice si sirven; y, si quieres, te dibuja un mapa aproximado de tu proyecto con un primer `AGENTS.md`. El prompt y cómo usarlo están en **`sparring-paco.md`** (vale cualquier chat gratis). Si se pone blando, dile: "no me aplaudas, rompe la idea".
 
-**Cuando tengas la frase, publícala en el canal de clase.** Te la apruebo ahí; si tengo dudas, paso por tu mesa. Mientras, sigue con el paso 1.
+**Cuando tengas la frase, publícala en el debate “Ideas y URLs” del aula virtual.** Te la apruebo ahí; si tengo dudas, paso por tu mesa. Mientras, sigue con el paso 1.
 
 **Si a las 20:30 no tienes idea aprobada,** elige una de estas temáticas de ejemplo y sigue esta guía igual. Todas tienen datos abiertos que puedes usar citando la fuente. Pisos Madrid no está en la lista: es el proyecto de mis demos y lo vas a ver entero.
 
@@ -220,7 +220,7 @@ A partir de ahora, **cada `git push` vuelve a publicar tu página sola.** No hac
 
 ## Paso 8: publica tu URL
 
-En el canal de clase, una línea:
+En el debate “Ideas y URLs” del aula virtual, una línea:
 
 > Tu nombre · https://tu-proyecto.vercel.app · Con [datos] quiero predecir [qué].
 
