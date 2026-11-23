@@ -23,7 +23,7 @@ Lo oficial (Guía Docente, Cronograma, entregas y notas) está en el aula virtua
 | 8 | Jue 03/12 | Entrega del documento de autoevaluación y revisión de 3 minutos con el docente | |
 | 9 | Mié 09/12 | Presentaciones: 8 minutos por alumno, obligatorias y presenciales | |
 
-Cada tarde, de 16:30 a 21:30, con descanso de 18:00 a 18:30. La apertura de las 16:30 (el "truco del día") no se repite.
+Cada tarde, de 16:30 a 21:30, con descanso de 18:30 a 19:00. La apertura de las 16:30 (el "truco del día") no se repite.
 
 ## Sesión 1
 
