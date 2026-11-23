@@ -4,8 +4,9 @@ Módulo 10 · Sesión 1 · lunes 23/11/2026
 
 Los pasos y los prompts de la demo de las 19:00, para que los sigas a tu ritmo con tu propio proyecto. Al terminar tendrás:
 
-- **tu repositorio en GitHub**, con una carpeta por pieza del proyecto (hoy `web/`; `api/`, `mcp/` y `agente/` llegan en las próximas sesiones) y un `AGENTS.md` que explica tu proyecto;
-- **tu primera página publicada en Vercel**, con una URL que puedes abrir en el móvil.
+- **el repo de tu app**, en tu cuenta de GitHub y privado, con una carpeta por pieza del proyecto (hoy `web/`; `api/`, `mcp/` y `agente/` llegan en las próximas sesiones) y un `AGENTS.md` que explica tu proyecto;
+- **tu primera página publicada en Vercel**, con una URL que puedes abrir en el móvil;
+- **tu cuaderno del curso**, un repo privado con tu nombre, con tu app enlazada dentro.
 
 Tiempo: unos 30 a 45 minutos la primera vez. Necesitas el setup hecho (`setup-paso-a-paso.md`). Si no puedes instalar nada, ve al final: "Camino sin instalar nada".
 
@@ -45,14 +46,14 @@ Tu frase queda así, por ejemplo: "Con las medidas horarias de calidad del aire 
 
 ---
 
-## Paso 1: crea tu repositorio en GitHub
+## Paso 1: el repo de tu app, en tu cuenta y privado
+
+Tu app vive en un repo de **tu cuenta** de GitHub, privado por defecto, y no en tu cuaderno del curso (paso 8): Vercel gratis publica los repos privados de tu cuenta, pero no los de una organización.
 
 1. En https://github.com, pulsa **+** (arriba a la derecha) y **New repository**.
 2. **Repository name:** el nombre de tu proyecto, en minúsculas y con guiones (por ejemplo, `demanda-panaderia`). Aparecerá en tu URL.
 3. **Description:** tu idea en una frase.
-4. **Public** o **Private**:
-   - **Public** si tus datos son abiertos. Cualquiera podrá ver tu código y tus datos (es tu portfolio).
-   - **Private** si tus datos son de tu empresa o tienen datos personales. Vercel publica igual repos privados de tu cuenta personal. Más adelante tendrás que darme acceso.
+4. **Private.** Si tus datos son abiertos y quieres enseñarlo como portfolio, puedes hacerlo público más adelante. El acceso para mí lo da el paso 8.
 5. Marca **Add a README file**.
 6. **Create repository.**
 
@@ -207,7 +208,7 @@ Recarga tu repo en github.com: tienen que aparecer `AGENTS.md` y `web/index.html
 ## Paso 7: publícala en Vercel
 
 1. En https://vercel.com, pulsa **Add New...** y **Project**.
-2. En "Import Git Repository", busca tu repo y pulsa **Import**.
+2. En "Import Git Repository", busca el repo de tu app (nunca el cuaderno) y pulsa **Import**.
    ¿No aparece? Pulsa **Adjust GitHub App Permissions**, da acceso a ese repo y vuelve.
 3. **Root Directory:** pulsa **Edit**, elige la carpeta **`web`** y continúa. Es lo único que verá Vercel.
 4. **Framework Preset:** **Other**. No toques nada más.
@@ -218,13 +219,29 @@ A partir de ahora, **cada `git push` vuelve a publicar tu página sola.** No hac
 
 ---
 
-## Paso 8: publica tu URL
+## Paso 8: enlaza tu app en tu cuaderno
+
+Además del repo de tu app, tienes un **cuaderno**: un repo privado con tu nombre (`alumno-nombre-apellido`) en la organización del curso, https://github.com/inesdi-m10-ia-2026-11. Solo lo ves tú y el docente. Ahí van tu idea, tus decisiones, la bitácora de cada sesión y tus URLs, y dentro enlazas tu app, en `apps/`, para que tu agente vea el proyecto entero desde un sitio.
+
+1. **Acepta las dos invitaciones de GitHub:** la de la organización y la de tu cuaderno. Te llegan por email; también las ves en https://github.com/inesdi-m10-ia-2026-11.
+2. **Clona tu cuaderno** (cambia `alumno-nombre-apellido` por el nombre de tu repo):
+   ```bash
+   cd ~
+   git clone https://github.com/inesdi-m10-ia-2026-11/alumno-nombre-apellido.git
+   ```
+3. **Abre tu agente en la carpeta del cuaderno y sigue `tu-app-en-tu-cuenta.md`** (en el aula virtual y en https://github.com/inesdi-m10-ia-2026-11/curso/blob/main/sesion-01/tu-app-en-tu-cuenta.md). Cuando te pregunte si ya tienes el repo de tu app, dile que sí y dale su URL. El prompt la enlaza en `apps/`, me da acceso y la apunta en `urls.md`. Si montaste `web/` dentro del cuaderno, también la pasa al repo de tu app.
+
+Desde entonces tu app está en `apps/tu-proyecto`, dentro del cuaderno: es el mismo repo de tu cuenta, y cada `push` ahí vuelve a publicar en Vercel.
+
+---
+
+## Paso 9: publica tu URL
 
 En el debate “Ideas y URLs” del aula virtual, una línea:
 
 > Tu nombre · https://tu-proyecto.vercel.app · Con [datos] quiero predecir [qué].
 
-¿No has llegado a la URL? Publica tu idea y dónde te has quedado. Lo terminas en casa con esta guía.
+Apúntala también en `urls.md` de tu cuaderno. ¿No has llegado a la URL? Publica tu idea y dónde te has quedado. Lo terminas en casa con esta guía.
 
 ---
 
@@ -237,6 +254,8 @@ Si tu portátil no te deja instalar programas, puedes llegar al hito de hoy solo
 3. En tu repo, pulsa **Add file** y **Create new file**. Como nombre escribe `web/index.html` (la barra crea la carpeta). Pega el HTML y pulsa **Commit changes**.
 4. Haz lo mismo con `AGENTS.md` (plantilla del paso 3, rellenada a mano).
 5. Publica en Vercel (paso 7).
+
+El cuaderno (paso 8) lo enlazamos juntos cuando tengas el setup completo; mientras, acepta las dos invitaciones de GitHub.
 
 Por este camino no hay cifras calculadas: un chat no puede leer tu archivo completo de forma fiable. Llegarán cuando tengas el setup completo.
 
@@ -254,6 +273,8 @@ Por este camino no hay cifras calculadas: un chat no puede leer tu archivo compl
 | Una cifra no cuadra | El agente la estimó en vez de calcularla | "Ejecuta el script de scripts/ y usa exactamente lo que imprima" |
 | GitHub rechaza tu CSV | Pesa más de 100 MB | No lo subas: usa una muestra, o deja `datos/` fuera del repo |
 | Has subido algo privado (datos o una clave) | Faltaba en `.gitignore` | Avísame. Pon el repo en Private y, si era una clave, cámbiala |
+| Importaste el cuaderno en Vercel | Vercel gratis no publica repos privados de una organización | Importa el repo de tu app, el de tu cuenta |
+| No ves tu cuaderno en GitHub | No has aceptado las invitaciones | Acéptalas desde el email de GitHub o en https://github.com/inesdi-m10-ia-2026-11: son dos, la organización y tu cuaderno |
 
 ---
 
@@ -263,3 +284,4 @@ Por este camino no hay cifras calculadas: un chat no puede leer tu archivo compl
 - **`AGENTS.md`:** el agente sabe de qué va tu proyecto antes de que le pidas nada.
 - **Cifras calculadas con código**, nunca inventadas.
 - **Repo, Vercel, URL:** cada `git push` publica. Si no tiene URL, no existe.
+- **Tu cuaderno:** privado, con tu app enlazada en `apps/`; ahí irán tus decisiones, tu bitácora y tus URLs.
