@@ -14,7 +14,7 @@ Lo oficial (Guía Docente, Cronograma, entregas y notas) está en el aula virtua
 | # | Fecha | Hito práctico | Materiales |
 |---|---|---|---|
 | 1 | Lun 23/11 | Idea aprobada (datos reales y algo que predecir) y primera página en Vercel desde GitHub | [sesion-01](sesion-01/) |
-| 2 | Mar 24/11 | Tus datos en Supabase y una app con login, publicada en Vercel | [sesion-02](sesion-02/) |
+| 2 | Mar 24/11 | Tus datos en Supabase y una app con login, publicada en Vercel | |
 | 3 | Mié 25/11 | Tu modelo servido como API en Render y usado desde tu app | |
 | 4 | Jue 26/11 | Tu servidor MCP conectado a un asistente de IA. Comprobación: tus tres URLs | |
 | 5 | Lun 30/11 | Tu agente programado que avisa por Telegram | |
@@ -34,14 +34,6 @@ Cada tarde, de 16:30 a 21:30, con descanso de 18:30 a 19:00. La apertura de las 
 | [sparring-paco.md](sesion-01/sparring-paco.md) | Paco: sparring para tu idea, búsqueda de datos y mapa aproximado de tu proyecto |
 | [tu-app-en-tu-cuenta.md](sesion-01/tu-app-en-tu-cuenta.md) | El prompt que crea el repo de tu app en tu cuenta y lo enlaza en tu cuaderno (`apps/`), y cómo publicarla en Vercel |
 | [diapositivas-sesion-01.pdf](sesion-01/diapositivas-sesion-01.pdf) | Las diapositivas de la sesión, en PDF |
-
-## Sesión 2
-
-| Archivo | Para qué |
-|---|---|
-| [puesta-al-dia-s1.md](sesion-02/puesta-al-dia-s1.md) | La lista para llegar al hito de la sesión 1: tu cuaderno, tu app en tu cuenta y tu URL en Vercel |
-| [tu-proyecto-en-documentos.md](sesion-02/tu-proyecto-en-documentos.md) | Brief, arquitectura, estado y tareas de tu proyecto, en tu cuaderno, con un solo prompt |
-| [tu-app-con-datos.md](sesion-02/tu-app-con-datos.md) | Tus datos en Supabase y tu app con login, paso a paso |
 
 ## Otros repositorios
 
