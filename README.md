@@ -33,6 +33,7 @@ Cada tarde, de 16:30 a 21:30, con descanso de 18:00 a 18:30. La apertura de las 
 | [de-cero-a-url.md](sesion-01/de-cero-a-url.md) | Tu idea en una frase, tu repositorio y tu primera página publicada en Vercel |
 | [sparring-paco.md](sesion-01/sparring-paco.md) | Paco: sparring para tu idea, búsqueda de datos y mapa aproximado de tu proyecto |
 | [tu-app-en-tu-cuenta.md](sesion-01/tu-app-en-tu-cuenta.md) | El prompt que crea el repo de tu app en tu cuenta y lo enlaza en tu cuaderno (`apps/`), y cómo publicarla en Vercel |
+| [diapositivas-sesion-01.pdf](sesion-01/diapositivas-sesion-01.pdf) | Las diapositivas de la sesión, en PDF |
 
 ## Otros repositorios
 
