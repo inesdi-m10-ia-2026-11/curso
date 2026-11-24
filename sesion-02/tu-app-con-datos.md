@@ -67,13 +67,21 @@ En los tres casos, pídele a tu agente: "Este CSV da este error al importarlo en
 
 Tu agente no necesita tus datos: le basta su forma. Las cinco primeras líneas de tu CSV dicen las columnas y cómo son los valores.
 
-En la terminal, en la carpeta de tu cuaderno (Mac o Git Bash):
+En la terminal, en la carpeta de tu cuaderno.
+
+**Mac, Linux o Git Bash en Windows:**
 
 ```bash
 head -5 apps/tu-proyecto/datos/tu-archivo.csv
 ```
 
-(En PowerShell: `Get-Content apps\tu-proyecto\datos\tu-archivo.csv -TotalCount 5`.)
+**Windows, en PowerShell:**
+
+```powershell
+Get-Content apps\tu-proyecto\datos\tu-archivo.csv -TotalCount 5
+```
+
+Si en PowerShell las tildes o las eñes salen raras, añade `-Encoding UTF8` al final.
 
 Copia lo que sale. Si tus datos son de tu empresa o tienen datos personales, cambia los valores por otros inventados antes de pegarlos: al agente le basta con los nombres de columna y el tipo de valor.
 
