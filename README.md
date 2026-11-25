@@ -43,11 +43,14 @@ Cada tarde, de 16:30 a 21:30, con descanso de 18:30 a 19:00. La apertura de las 
 | [tu-proyecto-en-documentos.md](sesion-02/tu-proyecto-en-documentos.md) | Brief, arquitectura, estado y tareas de tu proyecto, en tu cuaderno, con un solo prompt |
 | [tu-app-con-datos.md](sesion-02/tu-app-con-datos.md) | Tus datos en Supabase y tu app con login, paso a paso |
 
-## Sesión 3 (avance)
+## Sesión 3
 
 | Archivo | Para qué |
 |---|---|
-| [avance-tu-modelo.md](sesion-03/avance-tu-modelo.md) | Si ya tienes la sesión 2 hecha: eliges qué predices, entrenas tu modelo con tus datos y lo guardas, en local. Mañana se publica en Render |
+| [de-los-datos-al-modelo.ipynb](sesion-03/de-los-datos-al-modelo.ipynb) | Práctica guiada en Colab, con los pisos de Madrid: de la predicción más tonta a un modelo que se equivoca la cuarta parte. Sin instalar nada |
+| [tu-modelo-como-api.md](sesion-03/tu-modelo-como-api.md) | Tu modelo, entrenado con tus datos, publicado como API en Render y usado desde tu app, paso a paso |
+| [revisa-mi-proyecto.md](sesion-03/revisa-mi-proyecto.md) | Un prompt para saber por dónde vas de verdad: tu agente comprueba cada pieza, te dice qué falta y te deja las tres tareas siguientes. Lo normal, una vez al día antes de cerrar |
+| [avance-tu-modelo.md](sesion-03/avance-tu-modelo.md) | Si ya tenías la sesión 2 hecha: eliges qué predices, entrenas tu modelo con tus datos y lo guardas, en local |
 
 ## Otros repositorios
 
