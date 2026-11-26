@@ -1,0 +1,18 @@
+# Opcional: Render lee este archivo con "New, Blueprint". En clase se crea a mano con
+# "New, Web Service" y estos mismos valores (la guía los da paso a paso).
+services:
+  - type: web
+    name: mini-mcp  # CAMBIA: el nombre de tu servicio. Sale en la URL
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11
+      # Tu token: Render te lo pide al crear el servicio. Nunca en el repo.
+      # Sin MCP_TOKEN, /mcp no se abre a nadie.
+      - key: MCP_TOKEN
+        sync: false

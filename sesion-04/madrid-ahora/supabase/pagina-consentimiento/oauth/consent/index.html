@@ -1,0 +1,105 @@
+<!doctype html>
+<!--
+  Página de consentimiento para el login de Madrid ahora (versión Supabase).
+
+  Cuando un agente (Claude Code, Codex...) se conecta al MCP de la Edge Function, Supabase
+  manda a la persona aquí: <Site URL>/oauth/consent?authorization_id=...
+  La página inicia sesión con Supabase y pregunta "¿dejas entrar a este agente?".
+
+  Rellena las dos constantes de abajo con la URL y la clave PUBLICABLE de tu proyecto
+  (la publicable es pública por diseño; nunca la secreta). Sirve esta carpeta como web:
+  en local, la Site URL es http://127.0.0.1:3000; en Vercel, la URL de tu web.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madrid ahora: dar acceso</title>
+<style>
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 420px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; }
+  h1 { font-size: 22px; }
+  input, button { font: inherit; padding: 8px 12px; margin: 4px 0; width: 100%; box-sizing: border-box; }
+  button { cursor: pointer; }
+  .fila { display: flex; gap: 8px; }
+  .aviso { color: #a00; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+  <h1>Madrid ahora</h1>
+  <p id="estado">Cargando...</p>
+
+  <form id="entrar" hidden>
+    <input id="correo" type="email" placeholder="Correo" autocomplete="email" required>
+    <input id="contrasena" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+    <div class="fila">
+      <button type="submit" id="boton-entrar">Entrar</button>
+      <button type="button" id="boton-alta">Crear cuenta</button>
+    </div>
+  </form>
+
+  <div id="consentimiento" hidden>
+    <p><strong id="cliente"></strong> quiere usar Madrid ahora con tu cuenta (<span id="quien"></span>):
+       leer y guardar tus lugares favoritos.</p>
+    <div class="fila">
+      <button id="aprobar">Dar acceso</button>
+      <button id="rechazar">No dar acceso</button>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.js"></script>
+<script>
+  const SUPABASE_URL = "<URL de tu proyecto, por ejemplo https://abcd.supabase.co>";
+  const CLAVE_PUBLICABLE = "<tu clave publicable, sb_publishable_...>";
+
+  // "cuentas" y no "supabase": la librería ya usa el nombre supabase.
+  const cuentas = window.supabase.createClient(SUPABASE_URL, CLAVE_PUBLICABLE);
+  const id = new URLSearchParams(location.search).get("authorization_id");
+  const $ = (x) => document.getElementById(x);
+  const decir = (texto, malo) => { $("estado").textContent = texto; $("estado").className = malo ? "aviso" : ""; };
+
+  async function seguir() {
+    if (!id) return decir("Falta authorization_id en la dirección: esta página la abre Supabase, no se abre a mano.", true);
+    const { data: sesion } = await cuentas.auth.getSession();
+    if (!sesion.session) {
+      decir("Entra con tu cuenta para dar acceso a tu agente.");
+      $("entrar").hidden = false;
+      return;
+    }
+    $("entrar").hidden = true;
+    const { data, error } = await cuentas.auth.oauth.getAuthorizationDetails(id);
+    if (error) return decir("No se puede seguir: " + error.message, true);
+    if (!data.authorization_id) {  // ya habías dado acceso a este agente: vuelve solo
+      decir("Ya habías dado acceso. Volviendo a tu agente...");
+      return location.assign(data.redirect_url);
+    }
+    $("cliente").textContent = data.client?.name || "Un agente";
+    $("quien").textContent = sesion.session.user.email;
+    decir("¿Das acceso?");
+    $("consentimiento").hidden = false;
+  }
+
+  async function entrar(alta) {
+    const credenciales = { email: $("correo").value, password: $("contrasena").value };
+    const { error } = alta ? await cuentas.auth.signUp(credenciales) : await cuentas.auth.signInWithPassword(credenciales);
+    if (error) return decir(error.message, true);
+    seguir();
+  }
+
+  async function decidir(aprobar) {
+    const { data, error } = aprobar
+      ? await cuentas.auth.oauth.approveAuthorization(id)
+      : await cuentas.auth.oauth.denyAuthorization(id);
+    if (error) return decir(error.message, true);
+    decir(aprobar ? "Hecho. Vuelve a tu agente." : "No has dado acceso.");
+    location.assign(data.redirect_url);  // devuelve el control al agente
+  }
+
+  $("entrar").addEventListener("submit", (e) => { e.preventDefault(); entrar(false); });
+  $("boton-alta").addEventListener("click", () => entrar(true));
+  $("aprobar").addEventListener("click", () => decidir(true));
+  $("rechazar").addEventListener("click", () => decidir(false));
+  seguir();
+</script>
+</body>
+</html>

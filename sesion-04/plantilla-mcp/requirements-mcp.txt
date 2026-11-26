@@ -1,0 +1,4 @@
+# Añade estas dos líneas al final de modelo/requirements.txt (Render solo instala ese).
+# mcp 2.x: la versión fijada, para que nadie instale la 1.x ni el paquete "fastmcp".
+mcp==2.3.0
+httpx==0.28.1
