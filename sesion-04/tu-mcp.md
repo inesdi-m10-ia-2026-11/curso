@@ -330,6 +330,26 @@ claude mcp add --transport http --scope user render https://mcp.render.com/mcp -
 
 Que el MCP lea servicios y logs con una clave "Read only": sin probar en clase. Instrucciones de cada agente en https://render.com/docs/mcp-server.
 
+
+### Opcional: el MCP de Vercel
+
+El de Vercel es oficial y entra con login (OAuth), sin token: `https://mcp.vercel.com`. Le preguntas por tus despliegues, sus logs y sus errores. **Ojo: no tiene modo de solo lectura.** Puede desplegar, cambiar variables de entorno y dominios, igual que tú en tu cuenta de Vercel. Deja que tu agente te pida permiso antes de cada herramienta y lee qué va a hacer antes de aceptar.
+
+Cómo añadirlo (se abre el navegador para entrar en Vercel; igual en Mac y Windows):
+
+- **Claude Code:** `claude mcp add --scope user --transport http vercel https://mcp.vercel.com` y después, dentro, `/mcp` (o `claude mcp login vercel`).
+- **Codex:** `codex mcp add vercel --url https://mcp.vercel.com`. Detecta el login y abre el navegador.
+- **OpenCode 2.x:** `opencode mcp add vercel --global --url https://mcp.vercel.com` y después `opencode mcp auth vercel`. En la 1.x, dentro de `"mcp"` de tu `opencode.json`: `"vercel": { "type": "remote", "url": "https://mcp.vercel.com" }`.
+- **Antigravity:** dentro de `mcpServers`: `"vercel": { "serverUrl": "https://mcp.vercel.com" }`, y Authenticate (sin probar).
+- **Gemini CLI:** `gemini mcp add --scope user --transport http vercel https://mcp.vercel.com` y, dentro, `/mcp auth vercel` (sin probar).
+- **VS Code con Copilot:** paleta de comandos (Cmd o Ctrl + Mayúsculas + P), "MCP: Add Server", tipo HTTP y la URL `https://mcp.vercel.com` (sin probar en clase). Igual para Supabase y Render.
+
+Pregunta de prueba:
+
+```text
+¿Cuál es el último despliegue de mi web en Vercel y ha dado algún error? No cambies nada.
+```
+
 ---
 
 ## Parte 2: decide las dos herramientas de tu MCP
