@@ -15,7 +15,7 @@ Lo oficial (Guía Docente, Cronograma, entregas y notas) está en el aula virtua
 |---|---|---|---|
 | 1 | Lun 23/11 | Idea aprobada (datos reales y algo que predecir) y primera página en Vercel desde GitHub | [sesion-01](sesion-01/) |
 | 2 | Mar 24/11 | Tus datos en Supabase y una app con login, publicada en Vercel | [sesion-02](sesion-02/) |
-| 3 | Mié 25/11 | Tu modelo servido como API en Render y usado desde tu app | [sesion-03](sesion-03/) (avance) |
+| 3 | Mié 25/11 | Tu modelo servido como API en Render y usado desde tu app | [sesion-03](sesion-03/) |
 | 4 | Jue 26/11 | Tu servidor MCP conectado a un asistente de IA. Comprobación: tus tres URLs | |
 | 5 | Lun 30/11 | Tu agente programado que avisa por Telegram | |
 | 6 | Mar 01/12 | Tu agente usa tu MCP como herramienta; cambiar su modelo | |
@@ -42,6 +42,7 @@ Cada tarde, de 16:30 a 21:30, con descanso de 18:30 a 19:00. La apertura de las 
 | [puesta-al-dia-s1.md](sesion-02/puesta-al-dia-s1.md) | La lista para llegar al hito de la sesión 1: tu cuaderno, tu app en tu cuenta y tu URL en Vercel |
 | [tu-proyecto-en-documentos.md](sesion-02/tu-proyecto-en-documentos.md) | Brief, arquitectura, estado y tareas de tu proyecto, en tu cuaderno, con un solo prompt |
 | [tu-app-con-datos.md](sesion-02/tu-app-con-datos.md) | Tus datos en Supabase y tu app con login, paso a paso |
+| [diapositivas-sesion-02.pdf](sesion-02/diapositivas-sesion-02.pdf) | Las diapositivas de la sesión, en PDF |
 
 ## Sesión 3
 
@@ -51,6 +52,7 @@ Cada tarde, de 16:30 a 21:30, con descanso de 18:30 a 19:00. La apertura de las 
 | [tu-modelo-como-api.md](sesion-03/tu-modelo-como-api.md) | Tu modelo, entrenado con tus datos, publicado como API en Render y usado desde tu app, paso a paso |
 | [revisa-mi-proyecto.md](sesion-03/revisa-mi-proyecto.md) | Un prompt para saber por dónde vas de verdad: tu agente comprueba cada pieza, te dice qué falta y te deja las tres tareas siguientes. Lo normal, una vez al día antes de cerrar |
 | [avance-tu-modelo.md](sesion-03/avance-tu-modelo.md) | Si ya tenías la sesión 2 hecha: eliges qué predices, entrenas tu modelo con tus datos y lo guardas, en local |
+| [diapositivas-sesion-03.pdf](sesion-03/diapositivas-sesion-03.pdf) | Las diapositivas de la sesión, en PDF, con las cuatro de reserva al final |
 
 ## Otros repositorios
 
