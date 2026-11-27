@@ -16,7 +16,7 @@ Lo oficial (Guía Docente, Cronograma, entregas y notas) está en el aula virtua
 | 1 | Lun 23/11 | Idea aprobada (datos reales y algo que predecir) y primera página en Vercel desde GitHub | [sesion-01](sesion-01/) |
 | 2 | Mar 24/11 | Tus datos en Supabase y una app con login, publicada en Vercel | [sesion-02](sesion-02/) |
 | 3 | Mié 25/11 | Tu modelo servido como API en Render y usado desde tu app | [sesion-03](sesion-03/) |
-| 4 | Jue 26/11 | Tu servidor MCP conectado a un asistente de IA. Comprobación: tus tres URLs | |
+| 4 | Jue 26/11 | Tu servidor MCP conectado a un asistente de IA. Comprobación: tus tres URLs | [sesion-04](sesion-04/) |
 | 5 | Lun 30/11 | Tu agente programado que avisa por Telegram | |
 | 6 | Mar 01/12 | Tu agente usa tu MCP como herramienta; cambiar su modelo | |
 | 7 | Mié 02/12 | Claves fuera del código, permisos y pruebas mínimas; revisión en parejas | |
@@ -53,6 +53,19 @@ Cada tarde, de 16:30 a 21:30, con descanso de 18:30 a 19:00. La apertura de las 
 | [revisa-mi-proyecto.md](sesion-03/revisa-mi-proyecto.md) | Un prompt para saber por dónde vas de verdad: tu agente comprueba cada pieza, te dice qué falta y te deja las tres tareas siguientes. Lo normal, una vez al día antes de cerrar |
 | [avance-tu-modelo.md](sesion-03/avance-tu-modelo.md) | Si ya tenías la sesión 2 hecha: eliges qué predices, entrenas tu modelo con tus datos y lo guardas, en local |
 | [diapositivas-sesion-03.pdf](sesion-03/diapositivas-sesion-03.pdf) | Las diapositivas de la sesión, en PDF, con las cuatro de reserva al final |
+
+## Sesión 4
+
+| Archivo | Para qué |
+|---|---|
+| [una-ia-pide-una-herramienta.ipynb](sesion-04/una-ia-pide-una-herramienta.ipynb) | Práctica guiada en Colab: haces a mano lo que hace un agente con un servidor MCP (conectarse, ver sus herramientas, llamarlas). El servidor de la clase ya está cerrado: usa la URL y el token de tu mini MCP |
+| [tu-mcp.md](sesion-04/tu-mcp.md) | La guía de la sesión: conectas MCP a tu agente, publicas tu mini MCP y después el MCP de tu proyecto en Render. Con la parte 7 (tu MCP en Supabase, con login), la escalera y los retos |
+| [mini-mcp/](sesion-04/mini-mcp/) | La base del mini MCP: el tiempo de cualquier ciudad, listo para publicar en Render y cambiar por tu caso |
+| [plantilla-mcp/](sesion-04/plantilla-mcp/) | La plantilla para añadir el MCP a la API de tu proyecto |
+| [madrid-ahora/supabase/](sesion-04/madrid-ahora/supabase/) | El ejemplo de la parte 7: un MCP en una Edge Function de Supabase, con login |
+| [revisa-mi-proyecto.md](sesion-04/revisa-mi-proyecto.md) | El prompt para saber por dónde vas, con las piezas de la sesión 4 |
+| [extra-rag.md](sesion-04/extra-rag.md) | Extra para quien ya tiene su MCP: RAG servido por tu MCP, con los archivos de apoyo en [extra-rag/](sesion-04/extra-rag/) |
+| [diapositivas-sesion-04.pdf](sesion-04/diapositivas-sesion-04.pdf) | Las diapositivas de la sesión, en PDF, con las de reserva al final |
 
 ## Otros repositorios
 
